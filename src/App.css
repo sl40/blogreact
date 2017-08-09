@@ -1,0 +1,48 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    z-index: 9;
+    animation: App-logo-spin infinite 20s linear;
+
+    width: 135px;
+    height: 175px;
+
+}
+
+.App-header {
+    z-index: 9;
+    background-color: #ffffffff;
+    color: black;
+}
+
+#root1 {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.App-intro {
+    font-size: large;
+}
+canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+@keyframes App-logo-spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
