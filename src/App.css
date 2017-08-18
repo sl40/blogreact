@@ -4,10 +4,8 @@
 
 .App-logo {
     z-index: 9;
-    animation: App-logo-spin infinite 20s linear;
-
-    width: 135px;
-    height: 175px;
+    animation: App-logo-spin infinite 40s linear;
+    height: 300px;
 
 }
 
@@ -32,17 +30,29 @@
 .App-intro {
     font-size: large;
 }
-canvas{
+
+canvas {
     position: absolute;
     width: 100%;
     height: 100%;
 
 }
+
 @keyframes App-logo-spin {
-    from {
+    0% {
         transform: rotateY(0deg);
     }
-    to {
+    /*25% {*/
+        /*transform: rotateY(30deg);*/
+    /*}*/
+    50% {
         transform: rotateY(360deg);
     }
+    /*75% {*/
+        /*transform: rotateY(-30deg);*/
+    /*}*/
+    100% {
+        transform: rotateY(0deg);
+    }
 }
+

@@ -23,7 +23,8 @@ class App extends Component {
             <div className="App">
                 <div className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h2>WELCOME TO 40</h2>
+                    <h1>WELCOME TO 40</h1>
+                    <h3>对每个有趣的灵魂说一句幸会</h3>
                 </div>
             </div>
         );
