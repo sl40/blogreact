@@ -1,3 +1,4 @@
+@import "~antd/dist/antd.css";
 .App {
     text-align: center;
 }
@@ -9,13 +10,8 @@
 
 }
 
-.App-header {
+#sk-icon {
     z-index: 9;
-    color: black;
-}
-
-#root1 {
-    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,6 +20,69 @@
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+#menu-host{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+#menu-host li{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    align-items: center;
+    margin: 0 10px;
+    height: 26px;
+    width: 50%;
+}
+.menu-li:hover:before, .menu-li:hover:after {
+    transform: translateX(0%);
+}
+.menu-li:before{
+
+    transform: translateX(104%);
+}
+.menu-li:after{
+
+    transform: translateX(-104%);
+}
+.menu-li:before, .menu-li:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: rgba(0, 0, 0, 0.6);
+    content: '';
+    height: 100%;
+    width: 100%;
+}
+.menu-li:hover a {
+    color: white !important;
+}
+
+.menu-a {
+    -webkit-transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color:black;
+    font-weight:bold;
+    z-index: 2;
+}
+
+
+
+#root {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .App-intro {
@@ -37,6 +96,7 @@ canvas {
 
 }
 
+/*svg翻转*/
 @keyframes App-logo-spin {
     0% {
         transform: rotateY(0deg);
