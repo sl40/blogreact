@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactMarkdown from 'react-markdown'
 import termsFrPath from '../../test.md'
 import {Row, Col} from 'antd';
-import './markdown.less'
+import './githubMarkdown.less'
 
 class Terms extends Component {
     constructor(props) {
@@ -21,8 +21,9 @@ class Terms extends Component {
         return (
             <div className="content">
                 <Row>
-                    <Col span={12} offset={6}>
-                        <ReactMarkdown className={'markdown'} source={this.state.terms} escapeHtml={false}/>
+                    {/*自适应*/}
+                    <Col xs={{span: 22, offset: 1}} sm={{span: 12, offset: 6}}>
+                        <ReactMarkdown className={'markdown'} source={this.state.terms}/>
                     </Col>
                 </Row>
             </div>
